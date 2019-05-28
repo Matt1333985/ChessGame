@@ -150,6 +150,18 @@ public class Pieces extends JFrame{
 						return true;
 					}
 				}
+				if((pos[0] - 1) == newPos[0]){
+					if((pos[1] - 1) == newPos[1]){
+						if((gameState[newPos[0]][newPos[1]] != null)){
+							return true;
+						}
+					}
+					if((pos[1] + 1) == newPos[1]){
+						if((gameState[newPos[0]][newPos[1]] != null)){
+							return true;
+						}
+					}
+				}
 			}else{
 				if((pos[0] - 1) == newPos[0] && (pos[1] == newPos[1])){
 					if(gameState[newPos[0]][newPos[1]] == null){
@@ -183,6 +195,18 @@ public class Pieces extends JFrame{
 						return true;
 					}
 				}
+				if((pos[0] + 1) == newPos[0]){
+					if((pos[1] + 1) == newPos[1]){
+						if((gameState[newPos[0]][newPos[1]] != null)){
+							return true;
+						}
+					}
+					if((pos[1] - 1) == newPos[1]){
+						if((gameState[newPos[0]][newPos[1]] != null)){
+							return true;
+						}
+					}
+				}					
 			}else{
 				if((pos[0] + 1) == newPos[0] && (pos[1] == newPos[1])){
 					if(gameState[newPos[0]][newPos[1]] == null){

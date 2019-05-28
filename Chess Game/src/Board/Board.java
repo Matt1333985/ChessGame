@@ -419,7 +419,130 @@ public class Board extends JFrame implements MouseListener{
 				}
 				x++;
 			}	
-			blackInCheck = false;
+			
+			//check for white knight in position to take king
+			x = currPos[0] - 1;
+			y = currPos[1] - 2;
+			if(x < 0 || y < 0){
+				//do nothing because we are outside the array boundaries
+			}else{
+				if(gameState[x][y] != null){
+					if(gameState[x][y].getColor() == 'w'){
+						char piece = gameState[x][y].getPiece();
+						if(piece == 'n'){
+							blackInCheck = true;
+							return;
+						}
+					}
+				}
+			}
+			x = currPos[0] - 2;
+			y = currPos[1] - 1;
+			if(x < 0 || y < 0){
+				//do nothing because we are outside the array boundaries
+			}else{
+				if(gameState[x][y] != null){
+					if(gameState[x][y].getColor() == 'w'){
+						char piece = gameState[x][y].getPiece();
+						if(piece == 'n'){
+							blackInCheck = true;
+							return;
+						}
+					}
+				}
+			}
+			x = currPos[0] + 1;
+			y = currPos[1] - 2;
+			if(x > 7 || y < 0){
+				//do nothing because we are outside the array boundaries
+			}else{
+				if(gameState[x][y] != null){
+					if(gameState[x][y].getColor() == 'w'){
+						char piece = gameState[x][y].getPiece();
+						if(piece == 'n'){
+							blackInCheck = true;
+							return;
+						}
+					}
+				}
+			}
+			x = currPos[0] + 2;
+			y = currPos[1] - 1;
+			if(x > 7 || y < 0){
+				//do nothing because we are outside the array boundaries
+			}else{
+				if(gameState[x][y] != null){
+					if(gameState[x][y].getColor() == 'w'){
+						char piece = gameState[x][y].getPiece();
+						if(piece == 'n'){
+							blackInCheck = true;
+							return;
+						}
+					}
+				}
+			}
+			x = currPos[0] + 1;
+			y = currPos[1] + 2;
+			if(x > 7 || y > 7){
+				//do nothing because we are outside the array boundaries
+			}else{
+				if(gameState[x][y] != null){
+					if(gameState[x][y].getColor() == 'w'){
+						char piece = gameState[x][y].getPiece();
+						if(piece == 'n'){
+							blackInCheck = true;
+							return;
+						}
+					}
+				}
+			}
+			x = currPos[0] + 2;
+			y = currPos[1] + 1;
+			if(x > 7 || y > 7){
+				//do nothing because we are outside the array boundaries
+			}else{
+				if(gameState[x][y] != null){
+					if(gameState[x][y].getColor() == 'w'){
+						char piece = gameState[x][y].getPiece();
+						if(piece == 'n'){
+							blackInCheck = true;
+							return;
+						}
+					}
+				}
+			}
+			x = currPos[0] - 1;
+			y = currPos[1] + 2;
+			if(x < 0 || y > 7){
+				//do nothing because we are outside the array boundaries
+			}else{
+				if(gameState[x][y] != null){
+					if(gameState[x][y].getColor() == 'w'){
+						char piece = gameState[x][y].getPiece();
+						if(piece == 'n'){
+							blackInCheck = true;
+							return;
+						}
+					}
+				}
+			}
+			x = currPos[0] - 2;
+			y = currPos[1] + 1;
+			if(x < 0 || y > 7){
+				//do nothing because we are outside the array boundaries
+			}else{
+				if(gameState[x][y] != null){
+					if(gameState[x][y].getColor() == 'w'){
+						char piece = gameState[x][y].getPiece();
+						if(piece == 'n'){
+							blackInCheck = true;
+							return;
+						}
+					}
+				}
+			}
+			
+			blackInCheck = false;			
 		}else if(turn == 'w'){
 			int [] currPos = whiteKing.getPos();			
 			int x = currPos[0] - 1;
@@ -607,6 +730,129 @@ public class Board extends JFrame implements MouseListener{
 				}
 				x++;
 			}
+			
+			//check for black knight in position to take king
+			x = currPos[0] - 1;
+			y = currPos[1] - 2;
+			if(x < 0 || y < 0){
+				//do nothing because we are outside the array boundaries
+			}else{
+				if(gameState[x][y] != null){
+					if(gameState[x][y].getColor() == 'b'){
+						char piece = gameState[x][y].getPiece();
+						if(piece == 'n'){
+							whiteInCheck = true;
+							return;
+						}
+					}
+				}
+			}
+			x = currPos[0] - 2;
+			y = currPos[1] - 1;
+			if(x < 0 || y < 0){
+				//do nothing because we are outside the array boundaries
+			}else{
+				if(gameState[x][y] != null){
+					if(gameState[x][y].getColor() == 'b'){
+						char piece = gameState[x][y].getPiece();
+						if(piece == 'n'){
+							whiteInCheck = true;
+							return;
+						}
+					}
+				}
+			}
+			x = currPos[0] + 1;
+			y = currPos[1] - 2;
+			if(x > 7 || y < 0){
+				//do nothing because we are outside the array boundaries
+			}else{
+				if(gameState[x][y] != null){
+					if(gameState[x][y].getColor() == 'b'){
+						char piece = gameState[x][y].getPiece();
+						if(piece == 'n'){
+							whiteInCheck = true;
+							return;
+						}
+					}
+				}
+			}
+			x = currPos[0] + 2;
+			y = currPos[1] - 1;
+			if(x > 7 || y < 0){
+				//do nothing because we are outside the array boundaries
+			}else{
+				if(gameState[x][y] != null){
+					if(gameState[x][y].getColor() == 'b'){
+						char piece = gameState[x][y].getPiece();
+						if(piece == 'n'){
+							whiteInCheck = true;
+							return;
+						}
+					}
+				}
+			}
+			x = currPos[0] + 1;
+			y = currPos[1] + 2;
+			if(x > 7 || y > 7){
+				//do nothing because we are outside the array boundaries
+			}else{
+				if(gameState[x][y] != null){
+					if(gameState[x][y].getColor() == 'b'){
+						char piece = gameState[x][y].getPiece();
+						if(piece == 'n'){
+							whiteInCheck = true;
+							return;
+						}
+					}
+				}
+			}
+			x = currPos[0] + 2;
+			y = currPos[1] + 1;
+			if(x > 7 || y > 7){
+				//do nothing because we are outside the array boundaries
+			}else{
+				if(gameState[x][y] != null){
+					if(gameState[x][y].getColor() == 'b'){
+						char piece = gameState[x][y].getPiece();
+						if(piece == 'n'){
+							whiteInCheck = true;
+							return;
+						}
+					}
+				}
+			}
+			x = currPos[0] - 1;
+			y = currPos[1] + 2;
+			if(x < 0 || y > 7){
+				//do nothing because we are outside the array boundaries
+			}else{
+				if(gameState[x][y] != null){
+					if(gameState[x][y].getColor() == 'b'){
+						char piece = gameState[x][y].getPiece();
+						if(piece == 'n'){
+							whiteInCheck = true;
+							return;
+						}
+					}
+				}
+			}
+			x = currPos[0] - 2;
+			y = currPos[1] + 1;
+			if(x < 0 || y > 7){
+				//do nothing because we are outside the array boundaries
+			}else{
+				if(gameState[x][y] != null){
+					if(gameState[x][y].getColor() == 'b'){
+						char piece = gameState[x][y].getPiece();
+						if(piece == 'n'){
+							whiteInCheck = true;
+							return;
+						}
+					}
+				}
+			}
+			
 			whiteInCheck = false;
 		}
 		
@@ -634,6 +880,7 @@ public class Board extends JFrame implements MouseListener{
 			
 		}else{
 			selectedPiece = getPiece(Integer.parseInt(tempArr[0]), Integer.parseInt(tempArr[1]));
+			//reset variables if illegal piece was selected
 			if(selectedPiece == null || selectedPiece.getColor() != turn){
 				pieceSelected = false;
 				selectedPiece = null;
